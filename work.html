@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work — Ali Raza</title>
+  <meta name="description" content="Selected work by Ali Raza — brand identities, social media campaigns, web graphics, print and video for 22 brands.">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body data-page="work">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="currentColor"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-canvas" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="3" width="7" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="13" width="7" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="16" width="7" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-layer" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="dotgrid" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="curtain" aria-hidden="true"><span class="curtain__label">Work</span></div>
+
+  <header class="nav">
+    <a href="index.html" class="brandmark" data-label="About" aria-label="Ali Raza — home">
+      <span class="brandmark__sq">AR</span>
+      <span>Ali Raza<small>Graphic Designer</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html" class="nav__link">About <sup>01</sup></a>
+      <a href="work.html" class="nav__link is-active" aria-current="page">Work <sup>02</sup></a>
+      <a href="contact.html" class="nav__link">Contact <sup>03</sup></a>
+    </nav>
+    <div class="status mono"><span class="status__dot"></span>Open to projects</div>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </header>
+  <div class="mobile-menu">
+    <div>
+      <a class="big" href="index.html"><sup>01</sup>About</a>
+      <a class="big" href="work.html"><sup>02</sup>Work</a>
+      <a class="big" href="contact.html"><sup>03</sup>Contact</a>
+    </div>
+    <div class="mono muted">alirazarawjani006@gmail.com<br>0319 0006224</div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <h1 class="page-hero__title"><span class="line-mask"><span class="ph-word">Work</span></span><sup id="count-total">(000)</sup></h1>
+      <div class="page-hero__row">
+        <p class="page-hero__lede ph-fade">Three years of identities, campaigns, web graphics, print and reels — for 22 brands across cybersecurity, real estate, retail, fashion and more. Pick a brand from the index, or switch to the canvas and drag around everything at once.</p>
+        <span class="layer-tag ph-fade"><svg><use href="#i-layer"/></svg>Artboard 02 — Portfolio</span>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="filters" role="toolbar" aria-label="Filter by discipline" id="filters"></div>
+      <div class="viewtoggle" role="tablist" aria-label="View">
+        <span class="viewtoggle__pill" aria-hidden="true"></span>
+        <button role="tab" aria-selected="true" class="is-active" data-view="index"><svg><use href="#i-list"/></svg>Index</button>
+        <button role="tab" aria-selected="false" data-view="canvas"><svg><use href="#i-canvas"/></svg>Canvas</button>
+      </div>
+    </div>
+
+    <section class="index" id="index" aria-label="Brand index">
+      <div class="index__head mono"><span>No.</span><span>Brand</span><span>Industry</span><span>Disciplines</span><span style="text-align:right">Pieces</span></div>
+      <div id="rows"></div>
+    </section>
+
+    <section class="canvas" id="canvas" hidden aria-label="Draggable canvas of all work" data-cursor="drag">
+      <div class="canvas__board" id="board"></div>
+      <div class="minimap" aria-hidden="true"><div id="mini"></div><b id="mini-view"></b></div>
+      <div class="canvas__hud mono">
+        <span id="canvas-hint">Drag to explore · Click to open</span>
+        <button id="canvas-center">Re-center ⌖</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="peek" aria-hidden="true"><div class="peek__inner"></div><span class="sel__box"><i></i><i></i><i></i><i></i><em class="sel__dims"></em></span></div>
+
+  <!-- Case overlay -->
+  <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="case-title">
+    <div class="case__bar">
+      <span class="layer-tag" id="case-layer"><svg><use href="#i-layer"/></svg><span></span></span>
+      <button class="case__close" id="case-close"><svg><use href="#i-close"/></svg>Close <span class="mono muted">Esc</span></button>
+    </div>
+    <div class="case__head">
+      <h2 class="case__title" id="case-title"></h2>
+      <div class="case__info">
+        <p id="case-desc"></p>
+        <dl class="case__facts mono">
+          <div><dt class="muted">Industry</dt><dd id="case-ind"></dd></div>
+          <div><dt class="muted">Scope</dt><dd id="case-tags"></dd></div>
+          <div><dt class="muted">Pieces</dt><dd id="case-count"></dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="masonry" id="case-grid"></div>
+    <button class="case__next" id="case-next"><span><span class="mono muted">Next brand</span><strong></strong></span><span class="round-cta" style="width:110px;font-size:13px">Next →</span></button>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lightbox__top">
+      <span class="mono" id="lb-title"></span>
+      <button class="lb-btn" id="lb-close" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+    </div>
+    <div class="lightbox__stage" id="lb-stage">
+      <button class="lb-btn lightbox__prev" id="lb-prev" aria-label="Previous"><svg><use href="#i-prev"/></svg></button>
+      <button class="lb-btn lightbox__next" id="lb-next" aria-label="Next"><svg><use href="#i-arrow"/></svg></button>
+    </div>
+    <div class="lightbox__bottom">
+      <span class="mono muted" id="lb-count"></span>
+      <div class="lightbox__thumbs" id="lb-thumbs"></div>
+      <span class="mono muted">← → to browse</span>
+    </div>
+  </div>
+
+  <footer class="footer" style="padding-top:clamp(60px,9vw,120px)">
+    <div class="footer__cta">
+      <h2 class="footer__big" data-reveal="lines"><span class="line-mask"><span>Like what</span></span><span class="line-mask"><span>you <span class="serif">see?</span></span></span></h2>
+      <div class="footer__row">
+        <div class="footer__links">
+          <a href="mailto:alirazarawjani006@gmail.com">alirazarawjani006@gmail.com</a>
+          <a href="tel:+923190006224">+92 319 0006224</a>
+        </div>
+        <a class="round-cta" href="contact.html" data-magnetic="0.4" data-label="Contact">
+          <svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="circ" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs><text font-family="JetBrains Mono" font-size="11" letter-spacing="4" fill="currentColor"><textPath href="#circ">START A PROJECT ✦ START A PROJECT ✦ START A PROJECT ✦ </textPath></text></svg>
+          Say<br>hello →
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom mono">
+      <span>© <span data-year>2026</span> Ali Raza</span>
+      <span>Karachi — <span data-clock>00:00:00</span> PKT</span>
+      <a href="index.html">About ↗</a>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/work.js"></script>
+</body>
+</html>
