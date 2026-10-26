@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Icon, Curtain, Nav, LayerTag, RoundCta, FooterBottom } from "../../components/Chrome";
 import PageScripts from "../../components/PageScripts";
+import { BRANDS } from "../../lib/helpers";
 
 export const metadata = {
   title: "Contact — Ali Raza",
@@ -117,7 +118,7 @@ export default function ContactPage() {
               <a href="index.html">About me</a>
               <a href="work.html">See the work</a>
             </div>
-            <RoundCta href="work.html" label="Work" ring="22 BRANDS ✦ SELECTED WORK ✦ 22 BRANDS ✦ SELECTED WORK ✦ ">View<br />work →</RoundCta>
+            <RoundCta href="work.html" label="Work" ring={`${BRANDS} BRANDS ✦ SELECTED WORK ✦ ${BRANDS} BRANDS ✦ SELECTED WORK ✦ `}>View<br />work →</RoundCta>
           </div>
         </div>
         <FooterBottom><a href="index.html">About ↗</a></FooterBottom>

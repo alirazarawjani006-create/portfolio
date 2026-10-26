@@ -1,11 +1,11 @@
 import { WORK } from "../lib/work-data";
-import { byId, pick, ratio, pad, HERO_BOARDS, BOARD_DEPTH, FEATURED } from "../lib/helpers";
+import { byId, pick, ratio, pad, HERO_BOARDS, BOARD_DEPTH, FEATURED, BRANDS } from "../lib/helpers";
 import { Icon, Curtain, Nav, LayerTag, RoundCta, ContactLinks, FooterBottom } from "../components/Chrome";
 import PageScripts from "../components/PageScripts";
 
 export const metadata = {
   title: "Ali Raza — Graphic Designer",
-  description: "Ali Raza — Karachi-based graphic designer, digital marketer and video editor. Brand identities, social campaigns, web graphics and reels for 22 brands.",
+  description: `Ali Raza — Karachi-based graphic designer, digital marketer and video editor. Brand identities, social campaigns, web graphics and reels for ${BRANDS} brands.`,
 };
 
 const SERVICES = [
@@ -15,8 +15,8 @@ const SERVICES = [
     desc: "Monthly content calendars, campaign creatives, launch teasers and awareness series that support brand identity and keep feeds consistent." },
   { peek: "aqua-tip", title: "Video Editing", icon: "film", tools: ["After Effects", "Filmora", "Reels", "Motion"],
     desc: "Reels, TikToks, logo animations and promo edits — media assets prepared and optimised for social and online use." },
-  { peek: "find-sayarat", title: "AI Tools", icon: "spark", tools: ["AI imagery", "Workflow", "Concepting"],
-    desc: "Using AI image and workflow tools to explore concepts, generate visuals and speed up production — without losing the designer’s eye." },
+  { peek: "ai-video-lab", title: "AI Tools", icon: "spark", tools: ["AI video", "AI imagery", "Concepting"],
+    desc: "Using AI image and video tools to explore concepts, generate visuals and speed up production — without losing the designer’s eye." },
 ];
 
 const STRENGTHS = [
@@ -101,7 +101,7 @@ export default function AboutPage() {
             <span className="mono muted">Karachi · Pakistan</span>
           </div>
           <p className="statement" data-words="">
-            I’m Ali — a creative, adaptable designer who turns ideas into <span className="serif accent">scroll-stopping</span> visuals. For three years I’ve shaped campaigns, identities, websites and reels for brands in cybersecurity, real estate, fashion, retail and beyond — using design, marketing sense and <span className="serif">AI tools</span> to move faster without losing the craft.
+            I’m Ali — a creative, adaptable designer who turns ideas into <span className="serif accent">scroll-stopping</span> visuals. For three years I’ve shaped campaigns, identities, websites and reels for brands in cybersecurity, logistics, real estate, fashion, law and beyond — using design, marketing sense and <span className="serif">AI tools</span> to move faster without losing the craft.
           </p>
 
           <div className="statement__aside">
@@ -116,7 +116,7 @@ export default function AboutPage() {
             </div>
             <div className="stats" data-reveal="stagger">
               <div className="stat"><div className="stat__num"><span data-count="3">0</span><sup>yrs</sup></div><p>Professional experience as an in-house graphic designer.</p></div>
-              <div className="stat"><div className="stat__num"><span data-count="22">0</span><sup>+</sup></div><p>Brands designed for, from start-ups to established firms.</p></div>
+              <div className="stat"><div className="stat__num"><span data-count={BRANDS}>0</span><sup>+</sup></div><p>Brands designed for, from start-ups to established firms.</p></div>
               <div className="stat"><div className="stat__num"><span data-count="2300">0</span><sup>+</sup></div><p>Exported posts, banners, logos and video edits delivered.</p></div>
               <div className="stat"><div className="stat__num"><span data-count="4">0</span><sup>in 1</sup></div><p>Design, marketing, video and AI — under one roof.</p></div>
             </div>
@@ -198,7 +198,7 @@ export default function AboutPage() {
         <section className="section" id="featured" style={{ paddingBottom: "clamp(60px,8vw,120px)" }}>
           <div className="section-head wrap">
             <h2 className="h2" data-reveal="lines"><span className="line-mask"><span>Selected</span></span><span className="line-mask"><span className="serif">work</span></span></h2>
-            <a className="btn" href="work.html" data-magnetic="0.2">All 22 brands <Icon id="arrow" /></a>
+            <a className="btn" href="work.html" data-magnetic="0.2">All {BRANDS} brands <Icon id="arrow" /></a>
           </div>
           <div className="hscroll">
             <div className="hscroll__track" id="featured-track">
@@ -213,7 +213,7 @@ export default function AboutPage() {
                   </a>
                 );
               })}
-              <div className="feat feat--end"><a href="work.html" data-label="Work"><span className="mono accent">22 brands</span>See all<br />work →</a></div>
+              <div className="feat feat--end"><a href="work.html" data-label="Work"><span className="mono accent">{BRANDS} brands</span>See all<br />work →</a></div>
             </div>
           </div>
         </section>

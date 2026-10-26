@@ -1,5 +1,5 @@
 """Convert the curated selection into web assets (public/assets/work) + lib/work-data.js"""
-import json, os, re, shutil, subprocess, collections
+import json, os, re, shutil, subprocess, collections, unicodedata
 from PIL import Image, ImageOps, ImageStat
 import imageio_ffmpeg
 Image.MAX_IMAGE_PIXELS = None
@@ -78,7 +78,9 @@ BRANDS = [
      "Packaging stickers for a small handmade business.", 0),
 ]
 
-def slug(s): return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+def slug(s):
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 def open_rgb(p):
     im = Image.open(p)

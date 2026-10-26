@@ -1,11 +1,11 @@
 import { WORK } from "../../lib/work-data";
-import { pad, TAGS, TOTAL } from "../../lib/helpers";
+import { pad, TAGS, TOTAL, BRANDS } from "../../lib/helpers";
 import { Icon, Curtain, Nav, LayerTag, RoundCta, ContactLinks, FooterBottom } from "../../components/Chrome";
 import PageScripts from "../../components/PageScripts";
 
 export const metadata = {
   title: "Work — Ali Raza",
-  description: "Selected work by Ali Raza — brand identities, social media campaigns, web graphics, print and video for 22 brands.",
+  description: `Selected work by Ali Raza — brand identities, social media campaigns, web graphics, print and video for ${BRANDS} brands.`,
 };
 
 export default function WorkPage() {
@@ -18,7 +18,7 @@ export default function WorkPage() {
         <section className="page-hero">
           <h1 className="page-hero__title"><span className="line-mask"><span className="ph-word">Work</span></span><sup id="count-total">({pad(TOTAL, 3)})</sup></h1>
           <div className="page-hero__row">
-            <p className="page-hero__lede ph-fade">Three years of identities, campaigns, web graphics, print and reels — for 22 brands across cybersecurity, real estate, retail, fashion and more. Pick a brand from the index, or switch to the canvas and drag around everything at once.</p>
+            <p className="page-hero__lede ph-fade">Three years of identities, campaigns, web graphics, print and reels — for {BRANDS} brands across cybersecurity, logistics, real estate, retail, fashion, law and more. Pick a brand from the index, or switch to the canvas and drag around everything at once.</p>
             <LayerTag className="layer-tag ph-fade">Artboard 02 — Portfolio</LayerTag>
           </div>
         </section>
