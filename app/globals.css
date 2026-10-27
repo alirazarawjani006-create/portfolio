@@ -335,7 +335,7 @@ input, textarea { font: inherit; color: inherit; }
 /* horizontal featured */
 .hscroll { position: relative; overflow: hidden; }
 .hscroll__track { display: flex; gap: clamp(16px, 2vw, 32px); padding-inline: var(--gutter); width: max-content; will-change: transform; }
-.feat { position: relative; width: clamp(260px, 34vw, 520px); flex: none; }
+.feat { position: relative; width: clamp(220px, min(34vw, calc((100svh - 200px) * .8)), 520px); flex: none; } /* sized so a whole card + caption fits the viewport height */
 .feat__img { position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 6px; background: var(--bg-3); }
 .feat__img img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.15); transition: transform 1.2s var(--ease); }
 .feat:hover .feat__img img { transform: scale(1.04); }
@@ -557,6 +557,11 @@ input, textarea { font: inherit; color: inherit; }
   .filters { min-width: 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); }
   .chip { flex: none; }
   .viewtoggle { justify-self: start; }
+  .hscroll { overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter); scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  .hscroll::-webkit-scrollbar { display: none; }
+  .hscroll__track::after { content: ""; flex: none; width: 1px; } /* keeps the end gutter when scrolled fully */
+  .feat { width: min(76vw, 320px); scroll-snap-align: start; }
+  .feat--end { width: min(60vw, 260px); }
   .page-hero { padding-bottom: 60px; } /* room for the toolbar that tucks up under it */
   .minimap { display: none; }
   .case__facts { grid-template-columns: 1fr 1fr; }
