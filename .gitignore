@@ -7,3 +7,5 @@ __pycache__/
 Thumbs.db
 _tools/sheets/
 _tools/*.json
+_tools/pdf/build/
+_tools/pdf/preview/
