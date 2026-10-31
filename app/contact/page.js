@@ -63,7 +63,7 @@ export default function ContactPage() {
             </div>
 
             <div className="info-cards" data-reveal="stagger">
-              <div className="info-card"><span className="mono muted">Local time · PKT</span><strong data-clock>00:00:00</strong></div>
+              <div className="info-card"><span className="mono muted">Based in</span><strong>Karachi, PK</strong></div>
               <a className="info-card" href="assets/files/Ali-Raza-CV.pdf" download data-cursor="Save"><span className="mono muted">Curriculum vitae</span><strong style={{ display: "flex", alignItems: "center", gap: 10 }}>Download CV <Icon id="down" width="26" height="26" /></strong></a>
             </div>
           </div>

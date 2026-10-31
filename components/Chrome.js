@@ -103,7 +103,7 @@ export function FooterBottom({ children }) {
   return (
     <div className="footer__bottom mono">
       <span>© <span data-year>2026</span> Ali Raza</span>
-      <span>Karachi — <span data-clock>00:00:00</span> PKT</span>
+      <span>Karachi, Pakistan</span>
       {children}
     </div>
   );
