@@ -45,13 +45,15 @@ export default function AboutPage() {
       <main>
         {/* HERO */}
         <section className="hero" id="top">
+          <div className="hero__bg" aria-hidden="true"><span className="hero__glow"></span></div>
           <div className="ruler ruler--top" aria-hidden="true"><span className="ruler__mark"></span></div>
           <div className="ruler ruler--left" aria-hidden="true"></div>
 
           <div className="hero__meta mono">
             <span>Portfolio © <span data-year>2026</span></span>
-            <span>Karachi, PK — <span data-clock>00:00:00</span></span>
+            <span>Based in Karachi, PK</span>
             <span>Design · Marketing · Motion</span>
+            <i className="hero__rule" aria-hidden="true"></i>
           </div>
 
           <div className="artboards" aria-hidden="true">
