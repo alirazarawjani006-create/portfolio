@@ -2,6 +2,7 @@ import { WORK } from "../lib/work-data";
 import { byId, pick, ratio, pad, HERO_BOARDS, BOARD_DEPTH, FEATURED, BRANDS } from "../lib/helpers";
 import { Icon, Curtain, Nav, LayerTag, RoundCta, ContactLinks, FooterBottom } from "../components/Chrome";
 import PageScripts from "../components/PageScripts";
+import { Toolkit } from "../components/Tools";
 
 export const metadata = {
   title: "Ali Raza — Graphic Designer",
@@ -96,6 +97,30 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* KERNING GAME */}
+        <section className="section wrap kern" id="kern" aria-label="Kerning game">
+          <div className="section-head">
+            <h2 className="h2" data-reveal="lines"><span className="line-mask"><span>Mind the</span></span><span className="line-mask"><span className="serif">gap</span></span></h2>
+            <LayerTag>Layer 00 - Kerning game</LayerTag>
+          </div>
+          <div className="kern__board" data-reveal="fade">
+            <div className="kern__top mono">
+              <span>Word <b data-k-round="">1/5</b></span>
+              <span className="kern__how">Drag the letters until the spacing feels even</span>
+              <span>Score <b data-k-score="">000</b></span>
+            </div>
+            <div className="kern__bar" aria-hidden="true"><i></i></div>
+            <div className="kern__stage"></div>
+            <div className="kern__foot">
+              <div className="kern__result" aria-live="polite"><b>0</b><span></span></div>
+              <div className="kern__btns">
+                <button type="button" className="btn" data-k-check="" data-magnetic="0.2">Check spacing <Icon id="arrow" /></button>
+                <button type="button" className="btn btn--ghost" data-k-next="" hidden>Next word <Icon id="arrow" /></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* STATEMENT */}
         <section className="section wrap" id="about">
           <div className="section-head">
@@ -146,6 +171,7 @@ export default function AboutPage() {
               );
             })}
           </div>
+          <Toolkit />
         </section>
 
         {/* EXPERIENCE + EDUCATION */}
@@ -189,7 +215,7 @@ export default function AboutPage() {
           </div>
           <div className="strengths" data-reveal="stagger">
             {STRENGTHS.map(([a, b, p, g], i) => (
-              <div key={g} className="strength"><span className="mono accent">{pad(i + 1)}</span>
+              <div key={g} className="strength" data-tilt=""><span className="mono accent">{pad(i + 1)}</span>
                 <div><h3>{a}{b && <><br />{b}</>}</h3><p>{p}</p></div>
                 <span className="strength__glyph">{g}</span></div>
             ))}
