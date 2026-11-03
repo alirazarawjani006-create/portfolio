@@ -74,8 +74,6 @@ BRANDS = [
      "Logo concepts for a security brand.", 0),
     ("Case Culture", "Case Culture", "Accessories", ["Branding"],
      "Monogram and logo system for an accessories brand.", 0),
-    ("izhaan", "Izhaan", "Handmade Goods", ["Print"],
-     "Packaging stickers for a small handmade business.", 0),
 ]
 
 def slug(s):

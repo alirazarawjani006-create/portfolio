@@ -197,7 +197,7 @@ export default function AboutPage() {
         </section>
 
         {/* FEATURED (horizontal) */}
-        <section className="section" id="featured" style={{ paddingBottom: "clamp(60px,8vw,120px)" }}>
+        <section className="section" id="featured" style={{ paddingBottom: "clamp(40px,5vw,80px)" }}>
           <div className="section-head wrap">
             <h2 className="h2" data-reveal="lines"><span className="line-mask"><span>Selected</span></span><span className="line-mask"><span className="serif">work</span></span></h2>
             <a className="btn" href="work.html" data-magnetic="0.2">All {BRANDS} brands <Icon id="arrow" /></a>

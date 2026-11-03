@@ -176,8 +176,8 @@ input, textarea { font: inherit; color: inherit; }
 }
 .layer-tag svg { width: 12px; height: 12px; color: var(--accent); }
 
-.section { position: relative; padding-block: clamp(80px, 13vw, 180px); }
-.section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: clamp(40px, 6vw, 80px); flex-wrap: wrap; }
+.section { position: relative; padding-block: clamp(48px, 6vw, 96px); }
+.section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: clamp(28px, 4vw, 56px); flex-wrap: wrap; }
 .h2 { font-size: clamp(40px, 7.2vw, 112px); font-weight: 500; line-height: .95; letter-spacing: -.055em; }
 .h2 .serif { letter-spacing: -.03em; }
 
@@ -210,7 +210,7 @@ input, textarea { font: inherit; color: inherit; }
 .marquee--ghost .marquee__item { color: transparent; -webkit-text-stroke: 1px var(--line-2); }
 
 /* ---------- Footer CTA ---------- */
-.footer { position: relative; padding: clamp(80px, 12vw, 160px) var(--gutter) 28px; border-top: 1px solid var(--line); overflow: hidden; }
+.footer { position: relative; padding: clamp(56px, 8vw, 120px) var(--gutter) 28px; border-top: 1px solid var(--line); overflow: hidden; }
 .footer__cta { display: grid; gap: 40px; }
 .footer__big { font-size: clamp(56px, 15vw, 240px); line-height: .85; letter-spacing: -.065em; font-weight: 600; }
 .footer__big .serif { font-weight: 400; color: var(--accent); }
@@ -285,7 +285,7 @@ input, textarea { font: inherit; color: inherit; }
 .statement { font-size: clamp(28px, 4.4vw, 68px); line-height: 1.08; letter-spacing: -.04em; font-weight: 500; max-width: 1400px; }
 .statement .w { opacity: .14; transition: none; }
 .statement .serif { font-weight: 400; }
-.statement__aside { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; margin-top: clamp(48px, 7vw, 100px); }
+.statement__aside { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; margin-top: clamp(36px, 5vw, 72px); }
 .portrait-card { position: relative; border: 1px solid var(--line); border-radius: 6px; padding: 18px; background: var(--bg-2); max-width: 380px; }
 .portrait-card__mono { aspect-ratio: 1; display: grid; place-items: center; background: radial-gradient(circle at 30% 20%, rgba(255, 90, 31, .35), transparent 60%), var(--bg-3); border-radius: 4px; font-size: clamp(80px, 10vw, 150px); font-weight: 600; letter-spacing: -.08em; overflow: hidden; }
 .portrait-card__mono span { color: transparent; -webkit-text-stroke: 1.5px var(--fg); }
@@ -378,7 +378,7 @@ input, textarea { font: inherit; color: inherit; }
 .viewtoggle__pill { position: absolute; top: 4px; bottom: 4px; left: 4px; border-radius: 999px; background: var(--accent); transition: transform .55s var(--ease), width .55s var(--ease); }
 
 /* index list */
-.index { padding: 8px var(--gutter) clamp(80px, 10vw, 140px); }
+.index { padding: 8px var(--gutter) clamp(48px, 6vw, 96px); }
 .index__head { display: grid; grid-template-columns: 70px 1.6fr 1fr 1.2fr 90px; gap: 20px; padding: 12px 0; color: var(--muted); border-bottom: 1px solid var(--line); }
 .brand-row { position: relative; display: grid; grid-template-columns: 70px 1.6fr 1fr 1.2fr 90px; gap: 20px; align-items: center; padding: clamp(18px, 2.2vw, 30px) 0; border-bottom: 1px solid var(--line); width: 100%; text-align: left; isolation: isolate; }
 .brand-row::before { content: ""; position: absolute; inset: 0 calc(var(--gutter) * -1); background: var(--bg-2); opacity: 0; transition: opacity .4s; z-index: -1; }
@@ -470,7 +470,7 @@ input, textarea { font: inherit; color: inherit; }
 .contact-hero { padding: calc(var(--nav-h) + clamp(48px, 8vw, 110px)) var(--gutter) 0; }
 .contact-hero__title { font-size: clamp(60px, 12.5vw, 210px); font-weight: 600; line-height: .86; letter-spacing: -.07em; }
 .contact-hero__title .serif { font-weight: 400; color: var(--accent); letter-spacing: -.04em; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(40px, 6vw, 100px); padding: clamp(60px, 8vw, 120px) var(--gutter); align-items: start; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: clamp(40px, 6vw, 100px); padding: clamp(48px, 6vw, 96px) var(--gutter); align-items: start; }
 .channels { border-top: 1px solid var(--line); }
 .channel { position: relative; display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 18px; padding: 24px 0; border-bottom: 1px solid var(--line); isolation: isolate; }
 .channel::before { content: ""; position: absolute; inset: 0 -14px; border-radius: 6px; background: var(--bg-2); opacity: 0; transition: opacity .35s; z-index: -1; }

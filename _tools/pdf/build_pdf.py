@@ -15,7 +15,7 @@ URL = "https://alirazarawjani006-create.github.io/portfolio/"
 PW, PH, PAD = 1123, 794, 44          # A4 landscape at 96 dpi
 GAP = 10
 os.makedirs(os.path.join(BUILD, "img"), exist_ok=True)
-COMBINE = ["aqua-secure", "case-culture", "izhaan"]   # tiny brands share one page
+COMBINE = ["aqua-secure", "case-culture"]   # tiny brands share one page
 
 WORK = json.loads(open(os.path.join(SITE, "lib", "work-data.js"), encoding="utf-8").read()
                   .split("export const WORK = ", 1)[1].rstrip().rstrip(";"))
